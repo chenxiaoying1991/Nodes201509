@@ -32,9 +32,11 @@
 
     function fn() {
         n = 100;//->如果window下也没有,我们相当于在私有作用域中给window下增加了一个叫做n的变量,赋值为100,不会报错,操作的还是window下的n
+
+        console.log(n);//->100
     }
     fn();
-    console.log(n);//->100
+
 </script>
 </body>
 </html>
