@@ -18,7 +18,7 @@
     var f2 = new Fn("张宏逸", 61);
 
     //console.log(f1.writeJs === f2.writeJs);//->true
-    //console.log(f1.hasOwnProperty("writeJs"));//->false
+    console.log(f1.hasOwnProperty("writeJs"));//->false
 
     //一：基础概念
     //1、(每一个类都是函数数据类型的)每一个函数都天生自带一个属性prototype(原型),并且这个属性的值是一个对象数据类型的,浏览器为其开辟了一个堆内存(在这里存储的所有的属性和方法都是公有的属性和方法);
@@ -34,13 +34,13 @@
 
     //f1.__proto__.writeJs->忽略查找私有的过程,直接通过__proto__找公有的(在IE浏览器中为了防止我们对内置类的原型方法进行修改,IE浏览器屏蔽了我们使用__proto__)
 
-    console.log(f1.writeJs === f2.writeJs);//->true
-    console.log(f1.__proto__.writeJs === f1.writeJs);//->true
-    console.log(Fn.prototype.writeJs === f1.writeJs);//->true
+//    console.log(f1.writeJs === f2.writeJs);//->true
+//    console.log(f1.__proto__.writeJs === f1.writeJs);//->true
+//    console.log(Fn.prototype.writeJs === f1.writeJs);//->true
 
     //f1.hasOwnProperty === Object.prototype.hasOwnProperty === f1.__proto__.__proto__.hasOwnProperty;
 
-    console.log(f1.hasOwnProperty === f2.hasOwnProperty);//->true
+    //console.log(f1.hasOwnProperty === f2.hasOwnProperty);//->true
 </script>
 </body>
 </html>

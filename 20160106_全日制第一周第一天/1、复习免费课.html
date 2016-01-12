@@ -25,16 +25,16 @@
     //    console.log("name" in obj);//->true
     //    console.log("age" in obj);//->false
 
-    //    function prev(curEle) {
-    //        if ("previousElementSibling" in curEle) {//->当前的浏览器支持previousElementSibling获取上一个哥哥元素节点
-    //            return curEle.previousElementSibling;
-    //        }
-    //        var pre = curEle.previousSibling;
-    //        while (pre && pre.nodeType !== 1) {
-    //            pre = pre.previousSibling;
-    //        }
-    //        return pre;
-    //    }
+        function prev(curEle) {
+            if ("previousElementSibling" in curEle) {//->当前的浏览器支持previousElementSibling获取上一个哥哥元素节点
+                return curEle.previousElementSibling;
+            }
+            var pre = curEle.previousSibling;
+            while (pre && pre.nodeType !== 1) {
+                pre = pre.previousSibling;
+            }
+            return pre;
+        }
 
     //4、var oDiv=document.createElement("div"); document.body.appendChild(oDiv);
     //5、var oDiv2=oDiv.cloneNode(true);  document.body.insertBefore(oDiv2,oDiv);
