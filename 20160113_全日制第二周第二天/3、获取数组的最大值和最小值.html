@@ -6,15 +6,18 @@
 </head>
 <body>
 <script type="text/javascript">
-    var ary = [12, 23, 34, 14, 35, 16];
+    var ary = [12, 23, 34, 14, 35, 16,14,34,23];
 
     //2、利用obj存储(仅作参考)
-    //    var min = max = null;
-    //    var obj = {};
-    //    for (var i = 0; i < ary.length; i++) {
-    //        var cur = ary[i];
-    //        obj[cur] = cur;
-    //    }
+//        var min = max = null;
+        var obj = {};
+        for (var i = 0; i < ary.length; i++) {
+            var cur = ary[i];
+            obj[cur] = cur;
+
+        }
+    console.log(obj);
+
     //    var count = 0;
     //    for (var key in obj) {
     //        count++;
@@ -49,9 +52,9 @@
     //Math.max(12,23,34,14,35,16) ->35
 
     //原理:apply在操作的时候,虽然传递进来的是一个数组,但是和call一样相当于一个个的给max方法传递的参数值
-    var max = Math.max.apply(null, ary);
-    var min = Math.min.apply(null, ary);
-    console.log(max, min);
+//    var max = Math.max.apply(null, ary);
+//    var min = Math.min.apply(null, ary);
+//    console.log(max, min);
 
     //不行的
     //    var str = ary.toString();//->"12,23,34,14,35,16"
