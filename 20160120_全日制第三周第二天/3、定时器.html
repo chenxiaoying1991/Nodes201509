@@ -20,6 +20,10 @@
     //        //this->window 定时器传递进来的这个匿名函数中的this是window
     //    }, 1000);
     //    window.clearTimeout(timer);
+//    var a=window.setInterval(function(){},1000);
+//    var b=window.setInterval(function(){},1000);
+//    console.log(a);
+//    console.log(b);
 
     //3、需求:每一个1秒钟数一次,从0数到10,数完10之后动画结束
     //->使用setInterval
@@ -88,12 +92,13 @@
     //第四次sum(2)  5+4+3+2+sum(1)
     //第五次sum(1)  5+4+3+2+1
 
-    function sum(n) {
-        if (n === 1) return 1;
-        return n % 3 === 0 ? sum(n - 1) : n + sum(n - 1);
-    }
-    var total = sum(100);
-    console.log(total);//->3367
+//    function sum(n) {
+//        if (n === 1) return 1;
+//        return n % 3 === 0 ? sum(n - 1) : n + sum(n - 1);
+//    }
+//    var total = sum(100);
+//    console.log(total);//->3367
+
 </script>
 </body>
 </html>
