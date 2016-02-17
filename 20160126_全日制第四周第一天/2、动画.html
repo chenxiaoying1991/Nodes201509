@@ -51,7 +51,7 @@
     var timer = null;
     function move(tar) {
         window.clearTimeout(timer);
-
+        //先算出当前的位置
         var curL = utils.getCss(oDiv, "left");
         if (curL < tar) {//->向右
             if (curL + 15 >= tar) {

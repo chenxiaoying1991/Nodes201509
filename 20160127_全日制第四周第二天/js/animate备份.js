@@ -71,13 +71,13 @@
             times += 10;
             //->到达目标位置了,我们结束定时器,并且设置当前元素的位置是目标值,并且执行我们的回调函数
             if (times >= duration) {
+                window.clearInterval(curEle.timer);
                 for (var key in tarObj) {
                     if (tarObj.hasOwnProperty(key)) {
                         setCss(curEle, key, tarObj[key]);
                     }
                 }
                 typeof callBack === "function" ? callBack.call(curEle) : null;
-                window.clearInterval(curEle.timer);
                 return;
             }
 
